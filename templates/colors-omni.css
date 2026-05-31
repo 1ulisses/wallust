@@ -1,0 +1,10 @@
+:root {
+  --bg-main: {{ background }};
+  --bg-card: {{ background | lighten(0.1) }};
+  --border: {{ color1 }};
+  --text-primary: {{ foreground }};
+  --text-secondary: {{ color15 }};
+  --text-muted: {{ color7 }};
+  --accent: {{ color5 }};
+  --accent-glow: rgba(255, 255, 255, 0.1);
+}

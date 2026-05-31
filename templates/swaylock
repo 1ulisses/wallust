@@ -1,13 +1,18 @@
 # swaylock
 
-font=JetBrainsMono NFM
+font=Iosevka Nerd Font Propo
 indicator-radius=75
+fade-in=0.5
 show-failed-attempts
 show-keyboard-layout
 ignore-empty-password
+indicator-caps-lock
+clock
+
+effect-blur=4x2
 
 image={{wallpaper}}
-color={{background}}
+# color={{background}}
 
 bs-hl-color={{foreground}}
 caps-lock-bs-hl-color={{foreground}}
