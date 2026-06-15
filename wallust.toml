@@ -1,7 +1,7 @@
 # full - resized - wal - thumb -  fastresize - kmeans
 backend = "kmeans"
 # lab - labmixed - lch - lchmixed - salience
-color_space = "lchmixed"
+color_space = "lch"
 # dark - dark16 - darkcomp - darkcomp16
 # light - light16 - lightcomp - lightcomp16
 # harddark - harddark16 - harddarkcomp - harddarkcomp16
@@ -35,6 +35,7 @@ rmpc     = { src = 'rmpc-wal.ron', dst = '~/.config/rmpc/themes/wal.ron' }
 rofi     = { src = 'colors-rofi.rasi', dst = '~/.config/rofi/colors/wal.rasi' }
 sway     = { src = 'colors-sway', dst = '~/.config/sway/colors' }
 swaylock = { src = 'swaylock', dst = '~/.config/swaylock/config' }
+swaync   = { src = 'colors-swaync.css', dst = '~/.config/swaync/colors.css'}
 vscode   = { src = 'vscode.json', dst = '~/.cache/wallust/colors.json' }
 vscode2  = { src = 'vscode', dst = '~/.cache/wallust/colors' }
 walkvjsn = { src = 'kvwallust.json', dst = '~/.config/Kvantum/Wallust/Wallust.json' }

@@ -7,3 +7,4 @@ fi
 # Mango-specific hook
 pkill waybar
 waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css
+mmsg dispatch reload_config
