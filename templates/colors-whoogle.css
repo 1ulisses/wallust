@@ -1,0 +1,37 @@
+/* Colors */
+:root {
+    /* LIGHT THEME COLORS */
+    --whoogle-logo: {{color6}};
+    --whoogle-page-bg: {{background}};
+    --whoogle-element-bg: {{color4}};
+    --whoogle-text: {{foreground}};
+    --whoogle-contrast-text: {{background}};
+    --whoogle-secondary-text: {{color3}};
+    --whoogle-result-bg: {{background}};
+    --whoogle-result-title: {{color5}};
+    --whoogle-result-url: {{color9}};
+    --whoogle-result-visited: {{color10}};
+
+    /* DARK THEME COLORS */
+    --whoogle-dark-logo: {{color6}};
+    --whoogle-dark-page-bg: {{background}};
+    --whoogle-dark-element-bg: {{color4}};
+    --whoogle-dark-text: {{foreground}};
+    --whoogle-dark-contrast-text: {{foreground}};
+    --whoogle-dark-secondary-text: {{foreground | darken(0.25)}};
+    --whoogle-dark-result-bg: {{background | lighten(0.06)}};
+    --whoogle-dark-result-title: {{color5}};
+    --whoogle-dark-result-url: {{color9}};
+    --whoogle-dark-result-visited: {{color10}};
+}
+
+#whoogle-h,
+#whoogle-o-1,
+#whoogle-o-2,
+#whoogle-g,
+#whoogle-l,
+#whoogle-e,
+#whoogle-w {
+    fill: {{foreground}};
+}
+

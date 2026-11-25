@@ -1,0 +1,120 @@
+/* Limusic Wallust palette template.
+ *
+ * Copy this file into your wallust templates directory as limusic.css, point your
+ * wallust config at it and write the output to Limusic's CSS path.
+ * Wallust expands the placeholders below (templating is minijinja-based).
+ *
+ * Light values are emitted under html.matugen-theme; dark values under
+ * html.matugen-theme.dark, matching Limusic's root selector cascade.
+ *
+ * Mapping notes (wallust only has color0-15, background, foreground):
+ * - primary   -> color4, secondary -> color5, tertiary -> color3
+ * - error     -> color1
+ * - "on_*" (text on a colored bg) is the contrasting extreme
+ * - shades are derived only with darken (or raw colors), never lighten,
+ *   so everything stays on the darker end of the generated palette.
+ */
+
+{% set card        = background | darken(0.06) %}
+{% set surface_low = background | darken(0.03) %}
+{% set popover     = background | darken(0.12) %}
+{% set muted_text  = foreground | darken(0.3) %}
+{% set border      = foreground | darken(0.4) %}
+{% set outline     = foreground | darken(0.3) %}
+{% set dark_bg     = background | darken(0.35) %}
+{% set dark_border = dark_bg | darken(0.15) %}
+{% set dark_outline = dark_bg | darken(0.1) %}
+{% set dark_card   = dark_bg | darken(0.08) %}
+{% set dark_popover = dark_bg | darken(0.14) %}
+{% set dark_muted_text = foreground | darken(0.5) %}
+
+html.matugen-theme {
+	--background: {{background}};
+	--foreground: {{foreground}};
+
+	--card: {{card}};
+	--card-foreground: {{foreground}};
+
+	--popover: {{popover}};
+	--popover-foreground: {{foreground}};
+
+	/* Accent quartet. */
+	--primary: {{color4}};
+	--primary-foreground: {{background}};
+	--accent: {{color4}};
+	--accent-foreground: {{background}};
+
+	--secondary: {{color5}};
+	--secondary-foreground: {{foreground}};
+
+	--muted: {{surface_low}};
+	--muted-foreground: {{muted_text}};
+
+	--destructive: {{color1}};
+	--destructive-foreground: {{background}};
+
+	--border: {{border}};
+	--input: {{border}};
+	--outline: {{outline}};
+	--ring: {{color4}};
+
+	--chart-1: {{color4}};
+	--chart-2: {{color5}};
+	--chart-3: {{color3}};
+	--chart-4: {{color1}};
+	--chart-5: {{outline}};
+
+	--sidebar: {{background}};
+	--sidebar-foreground: {{foreground}};
+	--sidebar-primary: {{color4}};
+	--sidebar-primary-foreground: {{background}};
+	--sidebar-accent: {{card}};
+	--sidebar-accent-foreground: {{foreground}};
+	--sidebar-border: {{border}};
+	--sidebar-ring: {{color4}};
+}
+
+html.matugen-theme.dark {
+	--background: {{dark_bg}};
+	--foreground: {{foreground}};
+
+	--card: {{dark_card}};
+	--card-foreground: {{foreground}};
+
+	--popover: {{dark_popover}};
+	--popover-foreground: {{foreground}};
+
+	--primary: {{color4}};
+	--primary-foreground: {{dark_bg}};
+	--accent: {{color4}};
+	--accent-foreground: {{dark_bg}};
+
+	--secondary: {{color5 | darken(0.2)}};
+	--secondary-foreground: {{foreground}};
+
+	--muted: {{dark_card}};
+	--muted-foreground: {{dark_muted_text}};
+
+	--destructive: {{color1}};
+	--destructive-foreground: {{dark_bg}};
+
+	--border: {{dark_border}};
+	--input: {{dark_border}};
+	--outline: {{dark_outline}};
+	--ring: {{color4}};
+
+	--chart-1: {{color4}};
+	--chart-2: {{color5 | darken(0.2)}};
+	--chart-3: {{color3}};
+	--chart-4: {{color1}};
+	--chart-5: {{dark_outline}};
+
+	--sidebar: {{dark_bg}};
+	--sidebar-foreground: {{foreground}};
+	--sidebar-primary: {{color4}};
+	--sidebar-primary-foreground: {{dark_bg}};
+	--sidebar-accent: {{dark_card}};
+	--sidebar-accent-foreground: {{foreground}};
+	--sidebar-border: {{dark_border}};
+	--sidebar-ring: {{color4}};
+}

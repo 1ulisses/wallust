@@ -4,7 +4,8 @@ if [ "$XDG_CURRENT_DESKTOP" != "mango" ] && [ "$DESKTOP_SESSION" != "mango" ]; t
   exit 0
 fi
 
-# Mango-specific hook
 pkill waybar
 waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css
+swaync-client -rs
+swaync-client -R
 mmsg dispatch reload_config

@@ -1,0 +1,203 @@
+/* Special thanks to Adwaita for the inspiration of this theme */
+
+body.Wallust {
+  /* text colours – all from foreground */
+  --text-default: {{foreground}};
+  --text-secondary: {{foreground}};
+  --text-tertiary: {{foreground}};
+
+  /* background & surface – derived from background */
+  --background: {{background}};
+  --background-darker: {{background}};
+  --background-lighter: {{background | lighten(0.08)}};
+  --body-background: {{background}};
+  --gradient-body-background: {{background}};
+  --input-background: {{background | lighten(0.08)}};
+  --controller-hints-background: transparent;
+  --current-background: {{background}};
+  --modal-background: {{background}};
+  --modal-border: {{background | darken(0.05)}};
+  --osk-background: {{background}};
+  --osk-button-background: {{background | lighten(0.08)}};
+  --osk-button-border: {{color7}};                 /* pure white */
+  --search-bar-background: {{background | lighten(0.08)}};
+  --search-bar-border: {{background | lighten(0.04)}};
+
+  /* icons */
+  --action-icon: {{foreground}};
+  --action-icon-hover: {{color4}};
+  --action-icon-active: {{color5}};
+  --icons-background: {{background | lighten(0.08)}};
+
+  /* buttons */
+  --primary-button: {{background | lighten(0.04)}};
+  --primary-button-overlay: {{background | lighten(0.04)}};
+  --secondary-button: {{background | lighten(0.04)}};
+  --secondary-button-overlay: {{color4}};
+  --tertiary-button: {{color6}};
+  --tertiary-button-overlay: {{color8}};
+  --success-button: {{color5}};
+  --disabled-button: {{background | lighten(0.21)}};
+  --disabled-button-overlay: {{background | lighten(0.04)}};
+
+  /* navbar */
+  --navbar-active: {{foreground}};
+  --navbar-inactive: {{foreground}};
+  --navbar-active-background: {{color5}};
+  --navbar-accent: {{color4}};
+  --navbar-background: {{background | lighten(0.08)}};
+  --divider: {{background | lighten(0.21)}};
+
+  /* semantic colours */
+  --success: {{color5}};
+  --success-hover: {{color4}};
+  --danger: {{color6}};
+  --danger-hover: {{color8}};
+  --primary: {{color5}};
+  --secondary: {{color4}};
+  --accent: {{color4}};
+
+  /* status indicators */
+  --status-success: {{color9}};
+  --status-warning: {{color10}};
+  --status-danger: {{color6}};
+  --status-info: {{color4}};
+
+  /* neutral ramp – derived from background/foreground */
+  --neutral-01: {{background | lighten(0.21)}};
+  --neutral-02: {{background}};
+  --neutral-03: {{background | lighten(0.08)}};
+  --neutral-04: {{background | lighten(0.04)}};
+  --neutral-05: {{background | darken(0.05)}};
+  --neutral-06: {{foreground}};
+}
+
+body.Wallust select,
+body.Wallust input {
+  box-shadow: none !important;
+}
+
+body.Wallust .Field > input, 
+body.Wallust select, 
+body.Wallust .gameCard, 
+body.Wallust .gameCard > span,
+body.Wallust .SearchBar,
+body.Wallust .progressHeader,
+body.Wallust .dmItemList {
+  box-shadow: none !important;
+}
+
+body.Wallust .store-icon {
+  background: none;
+}
+
+body.Wallust .Sidebar {
+  box-shadow: 1px 0 0 0 var(--neutral-05);
+}
+
+body.Wallust .divider {
+  height: 1px;
+  margin: var(--space-3xs) 0 !important;
+}
+
+body.Wallust .dmItemList {
+  border: none;
+}
+
+body.Wallust .downloadManagerListItem {
+  border-top: none !important;
+  box-shadow: 0 -1px 0 0 var(--neutral-06);
+
+  margin: 0;
+  padding: var(--space-md) var(--space-sm-fixed);
+
+  background-color: #353535 !important;
+}
+
+body.Wallust .numberOfgames {
+  background: none;
+}
+
+body.Wallust .SearchBar,
+body.Wallust .gameCard,
+body.Wallust .Field > input, 
+body.Wallust select, 
+body.Wallust .progressHeader,
+body.Wallust .dmItemList,
+body.Wallust .svg-button {
+  border-radius: var(--border-radius);
+}
+
+body.Wallust .toggle,
+body.Wallust .gameConfigContainer .titleWrapper .settings-icon {
+  color: var(--text-default) !important;
+  background: var(--primary-button) !important;
+}
+
+body.Wallust .Header__filters {
+  height: 100%;
+  min-height: 35px;
+}
+
+body.Wallust .platformFilters {
+  margin: 0;
+}
+
+body.Wallust .storeFilter {
+  margin: auto 24px;
+}
+
+body.Wallust *:has(>.FormControl) {
+  height: 100%;
+}
+
+body.Wallust .FormControl {
+  height: 100%;
+
+  background: var(--primary-button);
+  color: var(--text-default);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
+body.Wallust .FormControl .FormControl__button:first-child {
+  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
+}
+
+body.Wallust .FormControl .FormControl__button:last-child {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
+}
+
+body.Wallust .FormControl__button:hover,
+body.Wallust .FormControl__button.active {
+  background: var(--secondary-button) !important;
+}
+
+body.Wallust .ActionIcons .FormControl__button > svg {
+  margin: auto;
+}
+
+/* All default Buttons, and their hovering */
+body.Wallust *:not(.submenu) > .button,
+body.Wallust .sideloadGameButton,
+body.Wallust .titleWrapper .svg-button, 
+body.Wallust .game-actions {
+  background: var(--primary-button);
+  color: var(--text-default);
+  box-shadow: var(--box-shadow);
+
+  border-radius: var(--border-radius);
+}
+
+/* Hover state for the download button, if applicable */
+body.Medi0gre .downloadManagerListItem:hover {
+  background-color: {{color1}} !important; /* Hover state color */
+}
+
+body.Wallust *:not(.submenu).button:hover,
+body.Wallust .sideloadGameButton:hover,
+body.Wallust .titleWrapper .svg-button:hover, 
+body.Wallust .titleWrapper .settings-icon:hover {
+  background: var(--secondary-button) !important;
+  color: var(--text-default);
+}

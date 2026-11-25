@@ -1,0 +1,128 @@
+:root {
+  --bg: {{background}};
+  --bg-light: {{background | lighten(0.1)}};
+  --bg-hover: {{background | lighten(0.2)}};
+  --border: {{color1}};
+  --border-light: {{color2}};
+  --text-primary: {{foreground}};
+  --text-secondary: {{color15}};
+  --text-link: {{color5}};
+  --text-link-visited: {{color8}};
+  --text-cite: {{color12}};
+  --text-snippet: {{color13}};
+  --search-bar-bg: {{background | lighten(0.1)}};
+  --search-bar-bg-hover: {{background | lighten(0.2)}};
+  --btn-bg: {{color5}};
+  --btn-text: {{foreground}};
+  --overlay-bg: rgba({{color0 | rgb}}, 0.4);
+  --white: {{background}};
+  --theme-bar-bg: transparent;
+  --theme-bar-text: {{color11}};
+  --theme-bar-border: transparent;
+  --theme-pagination-active-bg: {{color14}};
+  --shadow-sm: 0 2px 6px rgba({{color0 | rgb}}, 0.04);
+  --shadow-md: 0 6px 16px rgba({{color0 | rgb}}, 0.08);
+  --accent: {{color5}};
+  --primary: {{color5}};
+  --primary-hover: {{color9}};
+  --primary-rgb: {{color5}};
+  --danger: {{color10}};
+  --warning: {{color3}};
+  --success: {{color2}};
+  --font-family: "Iosevka";
+  --font-logo: "Iosevka";
+}
+
+:root[data-theme="light"] {
+  --bg: {{foreground}};
+  --bg-light: {{color15}};
+  --bg-hover: {{color14}};
+  --border: {{color13}};
+  --border-light: {{color12}};
+  --text-primary: {{background}};
+  --text-secondary: {{color1}};
+  --search-bar-bg: {{color15}};
+  --search-bar-bg-hover: {{color15}};
+  --btn-bg: {{color14}};
+  --btn-text: {{background}};
+  --white: {{foreground}};
+  --primary: {{color6}};
+  --primary-hover: {{color11}};
+  --primary-rgb: {{color6 | rgb}};
+  --danger: {{color12}};
+  --warning: {{color13}};
+  --success: {{color14}};
+  --contrast-bg: {{background}};
+  --contrast-text: {{foreground}};
+  --subtle-bg: {{color14}};
+}
+
+:root[data-theme="dark"] {
+  --bg: {{background}};
+  --bg-light: {{background | lighten(0.1)}};
+  --bg-hover: {{background | lighten(0.2)}};
+  --border: {{color1}};
+  --border-light: {{color2}};
+  --text-primary: {{foreground}};
+  --text-secondary: {{color15}};
+  --text-link: {{color5}};
+  --text-link-visited: {{color7}};
+  --text-cite: {{color12}};
+  --text-snippet: {{color13}};
+  --search-bar-bg: {{background | lighten(0.1)}};
+  --search-bar-bg-hover: {{background | lighten(0.2)}};
+  --btn-bg: {{color5}};
+  --btn-text: {{background}};
+  --overlay-bg: rgba({{color0 | rgb}}, 0.6);
+  --white: {{foreground}};
+  --theme-bar-bg: transparent;
+  --theme-bar-text: {{color11}};
+  --theme-pagination-active-bg: {{color14}};
+  --shadow-sm: 0 2px 6px rgba({{color0 | rgb}}, 0.2);
+  --shadow-md: 0 6px 16px rgba({{color0 | rgb}}, 0.4);
+  --primary: {{color5}};
+  --primary-hover: {{color9}};
+  --primary-rgb: {{color5}};
+  --danger: {{color10}};
+  --warning: {{color3}};
+  --success: {{color2}};
+  --contrast-bg: {{color7}};
+  --contrast-text: {{background}};
+  --subtle-bg: {{color4}};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --bg: {{background}};
+  --bg-light: {{background | lighten(0.1)}};
+  --bg-hover: {{background | lighten(0.2)}};
+  --border: {{color1}};
+  --border-light: {{color2}};
+  --text-primary: {{foreground}};
+  --text-secondary: {{color15}};
+  --text-link: {{color5}};
+  --text-link-visited: {{color7}};
+  --text-cite: {{color12}};
+  --text-snippet: {{color13}};
+  --search-bar-bg: {{background | lighten(0.1)}};
+  --search-bar-bg-hover: {{background | lighten(0.2)}};
+  --btn-bg: {{color5}};
+  --btn-text: {{background}};
+  --overlay-bg: rgba({{color0 | rgb}}, 0.6);
+  --white: {{foreground}};
+  --theme-bar-bg: transparent;
+  --theme-bar-text: {{color11}};
+  --theme-pagination-active-bg: {{color14}};
+  --shadow-sm: 0 2px 6px rgba({{color0 | rgb}}, 0.2);
+  --shadow-md: 0 6px 16px rgba({{color0 | rgb}}, 0.4);
+  --primary: {{color5}};
+  --primary-hover: {{color9}};
+  --primary-rgb: {{color5}};
+  --danger: {{color10}};
+  --warning: {{color3}};
+  --success: {{color2}};
+  --contrast-bg: {{color7}};
+  --contrast-text: {{background}};
+  --subtle-bg: {{color4}};
+  }
+}
